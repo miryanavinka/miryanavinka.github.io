@@ -1,0 +1,219 @@
+/* =========================================================
+   Miryana Vinka Dayanti — personal site
+   Japandi: warm, light, minimal. Design tokens up top so the
+   whole site is easy to retune from one place.
+   ========================================================= */
+
+:root {
+  /* Palette — warm paper / soft charcoal */
+  --bg:        #f6f3ee;  /* warm paper background */
+  --surface:   #fbfaf7;  /* cards / raised areas  */
+  --text:      #33302b;  /* soft charcoal (not pure black) */
+  --muted:     #857c6f;  /* secondary text */
+  --hairline:  #e5dfd4;  /* thin dividers / borders */
+  --accent:    #b08968;  /* muted clay — used sparingly */
+  --accent-soft:#cdb8a3; /* lighter clay for hovers */
+
+  /* Type */
+  --sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+
+  /* Rhythm */
+  --measure: 760px;     /* readable column width */
+  --space: 1.6rem;
+}
+
+/* ---------- reset-ish ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-weight: 300;          /* thin weight = the reference's elegance */
+  font-size: 18px;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { max-width: 100%; height: auto; display: block; }
+
+/* ---------- layout shell ---------- */
+.wrap {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ---------- header / nav ---------- */
+.site-header {
+  padding: 2.4rem 0 1.2rem;
+}
+.site-header .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem 1.5rem;
+}
+.brand {
+  font-size: 1.15rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 400;
+}
+.nav {
+  display: flex;
+  gap: 1.6rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: color .2s ease, border-color .2s ease;
+}
+.nav a:hover { color: var(--text); }
+.nav a.active {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
+.rule {
+  border: 0;
+  border-top: 1px solid var(--hairline);
+  margin: 0;
+}
+
+/* ---------- main ---------- */
+main { padding: 3rem 0 1rem; }
+
+h1, h2, h3 {
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: var(--text);
+}
+h1 { font-size: 2.4rem; margin: 0 0 0.4rem; }
+h2 {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  margin: 2.8rem 0 1rem;
+}
+h3 { font-size: 1.25rem; margin: 1.8rem 0 0.3rem; }
+
+p { margin: 0 0 1.1rem; }
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-soft); transition: color .2s, border-color .2s; }
+a:hover { color: var(--text); border-bottom-color: var(--text); }
+
+.lead { font-size: 1.15rem; color: var(--text); }
+.muted { color: var(--muted); }
+
+/* ---------- home hero ---------- */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2.4rem;
+  margin-bottom: 1rem;
+}
+.hero .portrait {
+  flex: 0 0 auto;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+}
+.hero .intro { flex: 1 1 280px; }
+.hero h1 {
+  /* optional japandi serif accent for the name; swap to var(--sans) if you prefer */
+  font-family: var(--serif);
+  font-size: 3rem;
+  letter-spacing: 0.01em;
+}
+.hero .role {
+  color: var(--muted);
+  font-size: 1rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-top: 0.2rem;
+}
+
+/* ---------- inline link row (social / contact) ---------- */
+.links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+  padding: 0;
+  margin: 1.4rem 0 0;
+}
+.links a {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--hairline);
+  color: var(--muted);
+}
+.links a:hover { color: var(--text); border-bottom-color: var(--accent); }
+
+/* ---------- publication / paper list ---------- */
+.papers { margin: 0; padding: 0; list-style: none; }
+.paper {
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--hairline);
+}
+.paper:last-child { border-bottom: 0; }
+.paper .title { color: var(--text); font-size: 1.15rem; margin: 0 0 0.2rem; }
+.paper .meta { color: var(--muted); font-size: 0.95rem; margin: 0 0 0.4rem; }
+.paper .abstract { color: var(--text); font-size: 0.98rem; margin: 0.4rem 0 0; }
+
+/* ---------- button ---------- */
+.btn {
+  display: inline-block;
+  margin-top: 0.6rem;
+  padding: 0.7rem 1.4rem;
+  border: 1px solid var(--accent);
+  border-radius: 2px;
+  color: var(--accent);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: transparent;
+  transition: background .2s, color .2s;
+}
+.btn:hover { background: var(--accent); color: var(--bg); border-bottom-color: var(--accent); }
+
+/* ---------- footer ---------- */
+.site-footer {
+  margin-top: 4rem;
+  padding: 2rem 0 3rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+}
+.site-footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.6rem; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .hero { gap: 1.6rem; }
+  .hero .portrait { width: 140px; height: 140px; }
+  .hero h1 { font-size: 2.3rem; }
+  h1 { font-size: 2rem; }
+  .site-header .wrap { flex-direction: column; align-items: flex-start; }
+}
