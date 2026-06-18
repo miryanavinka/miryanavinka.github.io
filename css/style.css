@@ -179,8 +179,19 @@ a:hover { color: var(--text); border-bottom-color: var(--text); }
 }
 .paper:last-child { border-bottom: 0; }
 .paper .title { color: var(--text); font-size: 1.15rem; margin: 0 0 0.2rem; }
+.paper .year {
+  float: right;
+  color: var(--muted);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  margin-left: 1rem;
+}
 .paper .meta { color: var(--muted); font-size: 0.95rem; margin: 0 0 0.4rem; }
 .paper .abstract { color: var(--text); font-size: 0.98rem; margin: 0.4rem 0 0; }
+
+/* ---------- media embed ---------- */
+.embed { margin: 1.4rem 0 2rem; max-width: 640px; }
+.embed iframe { display: block; width: 100%; }
 
 /* ---------- button ---------- */
 .btn {
