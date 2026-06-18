@@ -23,6 +23,17 @@
   --space: 1.6rem;
 }
 
+/* Dark theme — warm, soft (japandi at night), not pure black */
+[data-theme="dark"] {
+  --bg:        #232120;
+  --surface:   #2b2926;
+  --text:      #ece6dc;
+  --muted:     #a79e91;
+  --hairline:  #3a352f;
+  --accent:    #cfa783;
+  --accent-soft:#8d7a64;
+}
+
 /* ---------- reset-ish ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -37,6 +48,7 @@ body {
   letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  transition: background-color .3s ease, color .3s ease;
 }
 img { max-width: 100%; height: auto; display: block; }
 
@@ -88,6 +100,20 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--text);
   border-bottom-color: var(--accent);
 }
+
+/* dark-mode toggle */
+.nav-toggle { display: flex; align-items: center; }
+.theme-toggle {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0 0 2px;
+  transition: color .2s ease, transform .2s ease;
+}
+.theme-toggle:hover { color: var(--text); transform: rotate(-15deg); }
 
 .rule {
   border: 0;

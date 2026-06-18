@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
   <title>Miryana Vinka Dayanti</title>
   <meta name="description" content="Miryana Vinka Dayanti — PhD candidate in Agricultural, Environmental, and Development Economics at Ohio State University.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +23,7 @@
           <li><a href="cv.html">CV</a></li>
           <li><a href="media.html">Media</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li class="nav-toggle"><button id="theme-toggle" class="theme-toggle" type="button">☾</button></li>
         </ul>
       </nav>
     </div>
@@ -71,5 +73,6 @@
       <span>Columbus, Ohio</span>
     </div>
   </footer>
+  <script src="js/theme.js"></script>
 </body>
 </html>
