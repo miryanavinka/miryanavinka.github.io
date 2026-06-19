@@ -6,8 +6,8 @@
 
 :root {
   /* Palette — warm paper / soft charcoal */
-  --bg:        #f6f3ee;  /* warm paper background */
-  --surface:   #fbfaf7;  /* cards / raised areas  */
+  --bg:        #ffffff;  /* white background */
+  --surface:   #ffffff;  /* cards / raised areas  */
   --text:      #33302b;  /* soft charcoal (not pure black) */
   --muted:     #857c6f;  /* secondary text */
   --hairline:  #e5dfd4;  /* thin dividers / borders */
