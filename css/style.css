@@ -147,6 +147,36 @@ a:hover { color: var(--text); border-bottom-color: var(--text); }
 .lead { font-size: 1.15rem; color: var(--text); }
 .muted { color: var(--muted); }
 
+/* ---------- job-market notice ---------- */
+.notice {
+  background: var(--surface);
+  border-left: 3px solid var(--accent);
+  padding: 0.8rem 1.1rem;
+  color: var(--text);
+  font-size: 0.98rem;
+  margin: 0 0 1.6rem;
+}
+
+/* ---------- fields list ---------- */
+.fields h3 { margin-top: 0; }
+.field-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.4rem 0 0;
+}
+.field-list li {
+  position: relative;
+  padding-left: 1.1rem;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+.field-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
 /* ---------- home hero ---------- */
 .hero {
   display: flex;
