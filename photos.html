@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>(function(){try{var t=localStorage.getItem('theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
-  <title>Contact — Miryana Vinka Dayanti</title>
-  <meta name="description" content="Contact Miryana Vinka Dayanti.">
+  <title>Photos — Miryana Vinka Dayanti</title>
+  <meta name="description" content="Photos by Miryana Vinka Dayanti.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
@@ -22,8 +22,8 @@
           <li><a href="teaching.html">Teaching</a></li>
           <li><a href="cv.html">CV</a></li>
           <li><a href="media.html">Media</a></li>
-          <li><a href="photos.html">Photos</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="photos.html" class="active">Photos</a></li>
+          <li><a href="contact.html">Contact</a></li>
           <li class="nav-toggle"><button id="theme-toggle" class="theme-toggle" type="button">☾</button></li>
         </ul>
       </nav>
@@ -33,23 +33,27 @@
 
   <main>
     <div class="wrap">
-      <h1>Contact</h1>
+      <h1>Photos</h1>
+      <p class="lead">A few snapshots from conferences, travels, and everyday life.</p>
 
-      <h2>Email</h2>
-      <p><a href="mailto:dayanti.1@osu.edu">dayanti.1@osu.edu</a></p>
-
-      <h2>Office</h2>
-      <p class="muted">
-        317 Agricultural Administration Building<br>
-        2120 Fyffe Road<br>
-        Columbus, OH 43210
-      </p>
-
-      <h2>Elsewhere</h2>
-      <ul class="links">
-        <li><a href="https://www.linkedin.com/in/miryanavinka" rel="me" target="_blank">LinkedIn</a></li>
-        <li><a href="https://twitter.com/VinkaDayanti" rel="me" target="_blank">X / Twitter</a></li>
-      </ul>
+      <!-- Drop your images in assets/photos/ and add a figure for each below. -->
+      <div class="gallery">
+        <figure>
+          <img src="assets/photos/photo1.jpg" alt="" loading="lazy"
+               onerror="this.onerror=null;this.src='assets/profile-placeholder.svg'">
+          <figcaption></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/photos/photo2.jpg" alt="" loading="lazy"
+               onerror="this.onerror=null;this.src='assets/profile-placeholder.svg'">
+          <figcaption></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/photos/photo3.jpg" alt="" loading="lazy"
+               onerror="this.onerror=null;this.src='assets/profile-placeholder.svg'">
+          <figcaption></figcaption>
+        </figure>
+      </div>
     </div>
   </main>
 

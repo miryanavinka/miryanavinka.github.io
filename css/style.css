@@ -62,7 +62,18 @@ img { max-width: 100%; height: auto; display: block; }
 /* ---------- header / nav ---------- */
 .site-header {
   padding: 2.4rem 0 1.2rem;
+  background: #c9ad94;   /* lighter warm clay header bar, japandi */
 }
+/* header sits on the brownish bar, so its text goes light */
+.site-header .brand { color: #fbf7f1; }
+.site-header .nav a { color: rgba(251, 247, 241, 0.78); }
+.site-header .nav a:hover { color: #fff; }
+.site-header .nav a.active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+.site-header .theme-toggle { color: rgba(251, 247, 241, 0.78); }
+.site-header .theme-toggle:hover { color: #fff; }
 .site-header .wrap {
   display: flex;
   flex-wrap: wrap;
@@ -271,6 +282,28 @@ details.paper .abstract {
   border-top: 1px solid var(--hairline);
 }
 details.paper summary:hover .title { color: var(--accent); }
+
+/* ---------- photo gallery ---------- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.8rem 0 2rem;
+}
+.gallery figure { margin: 0; }
+.gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 1px solid var(--hairline);
+  border-radius: 2px;
+  background: var(--surface);
+}
+.gallery figcaption {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 0.4rem;
+}
 
 /* ---------- media embed ---------- */
 .embed { margin: 1.4rem 0 2rem; max-width: 640px; }
