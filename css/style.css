@@ -13,6 +13,7 @@
   --hairline:  #e5dfd4;  /* thin dividers / borders */
   --accent:    #b08968;  /* muted clay — used sparingly */
   --accent-soft:#cdb8a3; /* lighter clay for hovers */
+  --notice-bg: #faf5ee;  /* very light brown — job-market box */
 
   /* Type */
   --sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -32,6 +33,7 @@
   --hairline:  #3a352f;
   --accent:    #cfa783;
   --accent-soft:#8d7a64;
+  --notice-bg: #332c25;
 }
 
 /* ---------- reset-ish ---------- */
@@ -43,7 +45,7 @@ body {
   color: var(--text);
   font-family: var(--sans);
   font-weight: 300;          /* thin weight = the reference's elegance */
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.75;
   letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
@@ -152,11 +154,11 @@ a:hover { color: var(--text); border-bottom-color: var(--text); }
 
 /* ---------- job-market notice ---------- */
 .notice {
-  background: var(--surface);
-  border-left: 3px solid var(--accent);
-  padding: 0.8rem 1.1rem;
+  background: var(--notice-bg);
+  border-left: 4px solid #6b4a30;
+  padding: 1rem 1.25rem;
   color: var(--text);
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   margin: 0 0 1.6rem;
 }
 
@@ -329,7 +331,7 @@ details.paper summary:hover .title { color: var(--accent); }
 
 /* ---------- responsive ---------- */
 @media (max-width: 560px) {
-  body { font-size: 17px; }
+  body { font-size: 15px; }
   .hero { gap: 1.6rem; }
   .hero .portrait { width: 140px; height: 140px; }
   .hero h1 { font-size: 2.3rem; }
