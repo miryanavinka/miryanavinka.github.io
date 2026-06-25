@@ -239,7 +239,7 @@ a:hover { color: var(--text); border-bottom-color: var(--text); }
   border-bottom: 1px solid var(--hairline);
 }
 .paper:last-child { border-bottom: 0; }
-.paper .title { color: var(--text); font-size: 1.15rem; margin: 0 0 0.2rem; }
+.paper .title { color: var(--text); font-size: 1rem; margin: 0 0 0.2rem; }
 .paper .year {
   float: right;
   color: var(--muted);
